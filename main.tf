@@ -21,7 +21,7 @@ data "aws_availability_zones" "available" {
 # Check that the desired AZ is available
 module "assertion" {
   source  = "plzdontbanme/assertion/null"
-  version = "0.3.0"
+  version = "0.3.1"
 
   condition     = contains(data.aws_availability_zones.available.names, "ca-central-1a")
   error_message = "The desired availability zone is not available"
