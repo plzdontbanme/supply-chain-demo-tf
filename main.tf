@@ -27,4 +27,9 @@ module "assertion" {
   error_message = "The desired availability zone is not available"
 }
 
+# module "module_lock" {
+#   source  = "Invicton-Labs/module-lock/null"
+#   version = "~>0.1.0"
+# }
+
 # .... do other things, like deploy resources to the selected AZ
