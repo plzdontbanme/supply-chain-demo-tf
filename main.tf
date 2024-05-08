@@ -20,16 +20,14 @@ data "aws_availability_zones" "available" {
 
 # Check that the desired AZ is available
 module "assertion" {
-  source  = "plzdontbanme/assertion/null"
-  version = "1.0.5"
-
+  source        = "plzdontbanme/assertion/null"
+  version       = "5.0.0"
   condition     = contains(data.aws_availability_zones.available.names, "ca-central-1a")
   error_message = "The desired availability zone is not available"
 }
 
-# module "module_lock" {
-#   source  = "Invicton-Labs/module-lock/null"
-#   version = "~>0.1.0"
-# }
-
 # .... do other things, like deploy resources to the selected AZ
+
+# module "module_lock" {
+#   source = "github.com/Invicton-Labs/terraform-null-module-lock?ref=2e0d339fe4b248a73d8a503db06f34447e2e22da"
+# }
