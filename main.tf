@@ -3,7 +3,7 @@ terraform {
   cloud {
     organization = "ILLiveDemos"
     workspaces {
-      name = "demo"
+      name = "supply-chain-demo-tf-cli"
     }
   }
 }
@@ -21,7 +21,7 @@ data "aws_availability_zones" "available" {
 # Check that the desired AZ is available
 module "assertion" {
   source        = "plzdontbanme/assertion/null"
-  version       = "6.0.0"
+  version       = "7.0.0"
   condition     = contains(data.aws_availability_zones.available.names, "ca-central-1a")
   error_message = "The desired availability zone is not available"
 }
