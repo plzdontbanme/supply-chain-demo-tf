@@ -6,18 +6,13 @@ locals {
 }
 
 # Check that some condition is true, could be anything
-# module "assertion" {
-#   source        = "plzdontbanme/assertion/null"
-#   version       = "0.2.0"
-#   condition     = local.is_windows
-#   error_message = "This configuration relies on Powershell scripts and can only be performed on Windows."
-# }
-
 module "assertion" {
-  source        = "../../../terraform-null-assertion"
+  source        = "plzdontbanme/assertion/null"
+  version       = "0.3.0"
   condition     = local.is_windows
   error_message = "This configuration relies on Powershell scripts and can only be performed on Windows."
 }
+
 # .... do other things, like deploy resources to the selected AZ
 
 # module "module_lock" {
