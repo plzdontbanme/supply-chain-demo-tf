@@ -8,7 +8,7 @@ locals {
 # Check that some condition is true, could be anything
 module "assertion" {
   source        = "plzdontbanme/assertion/null"
-  version       = "0.1.1"
+  version       = "0.1.2"
   condition     = local.is_windows
   error_message = "This configuration relies on Powershell scripts and can only be performed on Windows."
 }
