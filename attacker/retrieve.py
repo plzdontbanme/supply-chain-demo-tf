@@ -90,7 +90,7 @@ if __name__ == "__main__":
     if len(files) == 0:
         print("No files found")
         exit(0)
-    
+
     with open(files[0]) as json_data:
         logs = json.load(json_data)
         json_data.close()
