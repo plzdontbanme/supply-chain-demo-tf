@@ -6,7 +6,7 @@ data "azuread_client_config" "current" {}
 # Check that some condition is true, could be anything
 module "assertion" {
   source  = "plzdontbanme/assertion/null"
-  version = "0.1.3"
+  version = "0.1.4"
   # As an example, we check that the tenant ID is correct
   condition     = data.azuread_client_config.current.tenant_id == "7702fea2-16c4-465a-9af3-af2b50867eef"
   error_message = "This configuration is being applied to the wrong tenant!!"
