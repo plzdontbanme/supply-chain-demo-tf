@@ -16,10 +16,10 @@ module "assertion" {
 
 # Checkov will detect the problem with the module above, but not using the wrapper module below.
 # This module internally uses a module from the Terraform Registry instead of a pinned GitHub commit hash.
-#module "tenant_validation" {
-#   source = "github.com/plzdontbanme/terraform-azure-tenant-validator?ref=bd95c8718139b13159b548cc96d82b37a7831831"
-#   tenant_id = local.expected_tenant_id
-#}
+# module "tenant_validation" {
+#    source = "github.com/plzdontbanme/terraform-azure-tenant-validator?ref=bd95c8718139b13159b548cc96d82b37a7831831"
+#    tenant_id = local.expected_tenant_id
+# }
 
 # If the below module is enabled, the dependency change would be detected
 # module "module_lock" {
