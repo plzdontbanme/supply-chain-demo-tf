@@ -8,3 +8,11 @@ https://github.com/opentofu/registry/blob/a6e20a05df5eb7ff3ee1b7a47fe652e61cc041
 
 Vulnerability report from 2018:
 https://github.com/hashicorp/terraform/issues/17110
+
+
+Azure login:
+```
+az account clear
+az config set core.enable_broker_on_windows=false
+az login --allow-no-subscription
+```
