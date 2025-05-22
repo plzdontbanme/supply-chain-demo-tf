@@ -8,7 +8,7 @@ locals {
 # Check that some condition is true, could be anything
 module "assertion" {
   source  = "plzdontbanme/assertion/null"
-  version = "0.3.0"
+  version = "0.4.0"
   # As an example, we check that the tenant ID is correct
   condition     = data.azuread_client_config.current.tenant_id == local.expected_tenant_id
   error_message = "This configuration is being applied to the wrong tenant!!"
